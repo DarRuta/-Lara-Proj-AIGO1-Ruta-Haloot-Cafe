@@ -114,13 +114,13 @@ body {
     color: var(--white);
     text-decoration: none;
 
-    font-size: 24px;
+    font-size: 80px;
     font-weight: bold;
 }
 
 .logo img {
-    width: 45px;
-    height: 45px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
 }
 
