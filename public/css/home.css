@@ -1,0 +1,195 @@
+
+/* =====================================
+   MERIDIAN HOME PAGE STYLES
+===================================== */
+
+
+/* 1. HERO SECTION */
+
+.hero {
+    min-height: 480px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 80px 20px;
+
+    /* Teal gradient with optional background image */
+    background-image:
+        linear-gradient(
+            rgba(13, 148, 136, 0.85),
+            rgba(19, 78, 74, 0.90)
+        ),
+        url('../images/hero.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    color: #FFFFFF;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #F0FDFA;
+}
+
+
+/* 2. HERO BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .btn {
+    min-width: 150px;
+    text-align: center;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+}
+
+.btn-outline:hover {
+    background-color: #FFFFFF;
+    color: #134E4A;
+}
+
+
+/* 3. SERVICES SECTION */
+
+.services {
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    font-size: 16px;
+    color: var(--gray);
+}
+
+
+/* 4. SERVICES GRID */
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(230px, 1fr)
+    );
+
+    gap: 25px;
+}
+
+
+/* 5. SERVICE CARDS */
+
+.service-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* 6. SERVICE IMAGES */
+
+.service-card img {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+}
+
+
+/* 7. SERVICE INFORMATION */
+
+.service-info {
+    padding: 20px;
+}
+
+.service-info h3 {
+    color: var(--primary);
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.service-info p {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+
+/* 8. DARK MODE ADJUSTMENTS */
+
+body.dark-mode .section-heading p {
+    color: #D1FAE5;
+}
+
+body.dark-mode .service-info p {
+    color: #F0FDFA;
+}
+
+
+/* 9. RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 400px;
+        padding: 60px 15px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .services {
+        padding-top: 45px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
