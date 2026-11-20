@@ -114,13 +114,13 @@ body {
     color: var(--white);
     text-decoration: none;
 
-    font-size: 80px;
+    font-size: 25px;
     font-weight: bold;
 }
 
 .logo img {
-    width: 150px;
-    height: 150px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
 }
 
@@ -199,25 +199,27 @@ body {
 /* 8. DARK MODE */
 
 body.dark-mode {
-    --page-bg: #134E4A;
-    --text: #F0FDFA;
-    --card-bg: #0B3B38;
+    --page-bg: #0E1411;
+    --text: #E8F3EC;
+    --card-bg: #16211B;
+    --primary: #22C55E;
 
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 body.dark-mode .navbar {
-    background-color: #0B3B38;
+    background-color: #16211B;
+    border-bottom: 1px solid #24352B;
 }
 
 body.dark-mode .theme-btn {
-    background-color: var(--primary);
+    background-color: #22C55E;
+    color: #0E1411;
 }
 
 body.dark-mode .theme-btn:hover {
-    background-color: #0F766E;
+    background-color: #16A34A;
 }
-
 
 /* 9. RESPONSIVE NAVBAR AND FOOTER */
 
@@ -239,4 +241,14 @@ body.dark-mode .theme-btn:hover {
         align-items: center;
     }
 
+}
+body.dark-mode .hero {
+    background:
+        linear-gradient(rgba(22, 163, 74, 0.75), rgba(14, 20, 17, 0.85)),
+        url('../images/hero.jpg') center / cover no-repeat;
+    color: #F0FDFA;
+}
+body.dark-mode .footer {
+    background-color: #16A34A;
+    color: #0E1411;
 }
