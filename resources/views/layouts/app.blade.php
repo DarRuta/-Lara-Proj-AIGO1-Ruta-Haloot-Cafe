@@ -58,45 +58,55 @@
 
 
     <!-- Footer -->
-    <footer class="footer" id="contact">
+   <footer class="footer" id="contact">
 
-        <div class="container footer-content">
+    <div class="container footer-content">
 
-            <div class="footer-brand">
+        <div class="footer-brand">
+
+            <div class="footer-title">
+
+                <img
+                    src="{{ asset('images/logo.png') }}"
+                    alt="Meridian logo"
+                    class="footer-logo"
+                >
 
                 <h2>Meridian</h2>
 
-                <p>
-                    Find your balance. Build your strength.
-                    Live a healthier lifestyle.
-                </p>
-
             </div>
-
-            <div class="footer-members">
-
-                <h3>Group Members</h3>
-
-                <ul>
-                    <li>Member 1 - Group Leader</li>
-                    <li>Member 2 - Replace with Name</li>
-                    <li>Member 3 - Replace with Name</li>
-                </ul>
-
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
 
             <p>
-                &copy; {{ date('Y') }} Meridian Gym.
-                All Rights Reserved.
+                Find your balance. Build your strength.
+                Live a healthier lifestyle.
             </p>
 
         </div>
 
-    </footer>
+        <div class="footer-members">
+
+            <h3>Group Members</h3>
+
+            <ul>
+                <li>Member 1 - Daryle John Ruta</li>
+                <li>Member 2 - Bienly Andre Haloot</li>
+                <li>Member 3 - Shayna Cafe</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            &copy; {{ date('Y') }} Meridian Gym.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
 
 
     <!-- Apply the saved theme when the page loads -->

@@ -252,3 +252,21 @@ body.dark-mode .footer {
     background-color: #16A34A;
     color: #0E1411;
 }
+
+/* Footer logo next to the Meridian heading */
+.footer-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-title h2 {
+    margin: 0;
+}
+
+.footer-logo {
+    display: block;
+    height: 40px;
+    width: auto;
+}
