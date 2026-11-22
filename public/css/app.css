@@ -1,0 +1,272 @@
+
+/* =====================================
+   MERIDIAN SHARED DESIGN SYSTEM
+===================================== */
+
+/* 1. COLOR VARIABLES */
+
+:root {
+    --primary: #0D9488;
+    --dark: #134E4A;
+    --light: #F0FDFA;
+
+    --white: #FFFFFF;
+    --text: #333333;
+    --gray: #64748B;
+
+    --card-bg: #FFFFFF;
+    --page-bg: #F0FDFA;
+
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    --radius: 8px;
+}
+
+
+/* 2. GLOBAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: var(--page-bg);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* 3. REUSABLE CONTAINER */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* 4. REUSABLE BUTTON */
+
+.btn {
+    display: inline-block;
+    padding: 11px 22px;
+
+    background-color: var(--primary);
+    color: var(--white);
+
+    text-decoration: none;
+    border: none;
+    border-radius: var(--radius);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--dark);
+    transform: translateY(-2px);
+}
+
+
+/* 5. REUSABLE CARD */
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+
+/* 6. NAVBAR */
+
+.navbar {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 15px 0;
+    box-shadow: var(--shadow);
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--white);
+    text-decoration: none;
+
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.75;
+}
+
+.theme-btn {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.theme-btn:hover {
+    background-color: #0B3B38;
+}
+
+
+/* 7. FOOTER */
+
+.footer {
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 45px 0 0;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 30px;
+}
+
+.footer-brand {
+    max-width: 400px;
+}
+
+.footer-brand h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.footer-members h3 {
+    margin-bottom: 12px;
+}
+
+.footer-members ul {
+    list-style: none;
+}
+
+.footer-members li {
+    margin-bottom: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+}
+
+
+/* 8. DARK MODE */
+
+body.dark-mode {
+    --page-bg: #0E1411;
+    --text: #E8F3EC;
+    --card-bg: #16211B;
+    --primary: #22C55E;
+
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode .navbar {
+    background-color: #16211B;
+    border-bottom: 1px solid #24352B;
+}
+
+body.dark-mode .theme-btn {
+    background-color: #22C55E;
+    color: #0E1411;
+}
+
+body.dark-mode .theme-btn:hover {
+    background-color: #16A34A;
+}
+
+/* 9. RESPONSIVE NAVBAR AND FOOTER */
+
+@media (max-width: 768px) {
+
+    .navbar-content {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+}
+body.dark-mode .hero {
+    background:
+        linear-gradient(rgba(22, 163, 74, 0.75), rgba(14, 20, 17, 0.85)),
+        url('../images/hero.jpg') center / cover no-repeat;
+    color: #F0FDFA;
+}
+body.dark-mode .footer {
+    background-color: #16A34A;
+    color: #0E1411;
+}
+
+/* Footer logo next to the Meridian heading */
+.footer-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-title h2 {
+    margin: 0;
+}
+
+.footer-logo {
+    display: block;
+    height: 40px;
+    width: auto;
+}

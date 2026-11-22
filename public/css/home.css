@@ -1,0 +1,570 @@
+/* =====================================
+   MERIDIAN HOME PAGE STYLES
+===================================== */
+
+
+/* 1. HERO SECTION */
+
+.hero {
+    min-height: 480px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 80px 20px;
+
+    /* Teal gradient with optional background image */
+    background-image:
+        linear-gradient(
+            rgba(13, 148, 136, 0.85),
+            rgba(19, 78, 74, 0.90)
+        ),
+        url('../images/hero.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    color: #FFFFFF;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #F0FDFA;
+}
+
+
+/* 2. HERO BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .btn {
+    min-width: 150px;
+    text-align: center;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+}
+
+.btn-outline:hover {
+    background-color: #FFFFFF;
+    color: #134E4A;
+}
+
+
+/* 3. SERVICES SECTION */
+
+.services {
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    font-size: 16px;
+    color: var(--gray);
+}
+
+
+/* 4. SERVICES GRID */
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(230px, 1fr)
+    );
+
+    gap: 25px;
+}
+
+
+/* 5. SERVICE CARDS */
+
+.service-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* 6. SERVICE IMAGES */
+
+.service-card img {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+}
+
+
+/* 7. SERVICE INFORMATION */
+
+.service-info {
+    padding: 20px;
+}
+
+.service-info h3 {
+    color: var(--primary);
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.service-info p {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+
+/* 8. DARK MODE ADJUSTMENTS */
+
+body.dark-mode .section-heading p {
+    color: #D1FAE5;
+}
+
+body.dark-mode .service-info p {
+    color: #F0FDFA;
+}
+
+
+/* 8B. MEMBERSHIP PLANS */
+
+.plans {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.plans-grid {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+
+    gap: 25px;
+    align-items: stretch;
+}
+
+.plan-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 35px 25px;
+    text-align: center;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plan-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.plan-card h3 {
+    font-size: 22px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.plan-price {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+.plan-price .currency {
+    font-size: 22px;
+    vertical-align: top;
+}
+
+.plan-price .period {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.plan-features li {
+    padding: 10px 0;
+    font-size: 15px;
+    color: var(--text);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+}
+
+.plan-features li::before {
+    content: "✓ ";
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* Highlighted plan */
+.plan-card.featured {
+    border: 2px solid var(--primary);
+}
+
+.plan-badge {
+    position: absolute;
+    top: -14px;
+
+    padding: 4px 16px;
+    border-radius: 20px;
+
+    background-color: var(--primary);
+    color: #FFFFFF;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+body.dark-mode .plan-badge {
+    color: #0E1411;
+}
+
+
+/* 8C. COACHES */
+
+.coaches {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.coaches-grid {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+
+    gap: 25px;
+}
+
+.coach-card {
+    padding: 30px 25px;
+    text-align: center;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.coach-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Fixed size circle, so every photo looks the same */
+.coach-card img {
+    display: block;
+
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary);
+    background-color: var(--primary);
+}
+
+.coach-card h3 {
+    font-size: 21px;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.coach-role {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.coach-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.coach-card p.coach-role {
+    color: var(--primary);
+}
+
+
+/* 8D. CUSTOMER REVIEWS */
+
+.reviews {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.reviews-grid {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(260px, 1fr)
+    );
+
+    gap: 25px;
+}
+
+.review-card {
+    padding: 30px 25px;
+    text-align: left;
+}
+
+.review-stars {
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: #FACC15;
+    margin-bottom: 12px;
+}
+
+.review-text {
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 18px;
+}
+
+.review-name {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.review-plan {
+    font-size: 13px;
+    color: var(--text);
+    opacity: 0.75;
+}
+
+
+/* 9. RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 400px;
+        padding: 60px 15px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .services {
+        padding-top: 45px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .coach-card img {
+        width: 130px;
+        height: 130px;
+    }
+
+}
+/* =====================================
+   LOGIN POPUP
+===================================== */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-overlay.open {
+    display: flex;
+}
+
+.modal-box {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    padding: 35px 30px;
+
+    background: #FFFFFF;
+    color: #134E4A;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.modal-box h2 {
+    margin-bottom: 5px;
+    color: #0D9488;
+}
+
+.modal-sub {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+
+    border: 0;
+    background: transparent;
+    color: inherit;
+
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+#loginForm label {
+    display: block;
+    margin: 14px 0 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#loginForm input {
+    width: 100%;
+    padding: 11px 12px;
+
+    border: 1px solid #9CA3AF;
+    border-radius: 6px;
+
+    background: #FFFFFF;
+    color: #134E4A;
+    font-size: 15px;
+}
+
+#loginForm input:focus {
+    outline: 2px solid #0D9488;
+    border-color: transparent;
+}
+
+#loginForm input.invalid {
+    border-color: #DC2626;
+}
+
+.password-wrap {
+    position: relative;
+}
+
+.password-wrap input {
+    padding-right: 64px;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+
+    border: 0;
+    background: transparent;
+    color: #134E4A;
+
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-error {
+    display: block;
+    min-height: 18px;
+    margin-top: 4px;
+    font-size: 13px;
+    color: #DC2626;
+}
+
+.login-success {
+    margin-bottom: 10px;
+    padding: 10px 12px;
+
+    border-radius: 6px;
+    background: #D1FAE5;
+    color: #065F46;
+    font-size: 14px;
+}
+
+.login-submit {
+    width: 100%;
+    margin-top: 18px;
+}
+
+/* Dark mode */
+body.dark-mode .modal-box {
+    background: #16211B;
+    color: #E8F3EC;
+}
+
+body.dark-mode .modal-box h2 {
+    color: #22C55E;
+}
+
+body.dark-mode .login-error {
+    color: #F87171;
+}
+
+body.dark-mode .login-submit {
+    color: #0E1411;
+}
