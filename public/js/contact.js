@@ -1,5 +1,7 @@
+
 /* MERIDIAN CONTACT PAGE
-   Client-side validation only. This demo does not send or store messages. */
+   Client-side validation with Laravel form submission.
+*/
 
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('meridianContactForm');
@@ -66,20 +68,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (name === '') {
             invalidate(fields.name, 'Please enter your name.');
+        } else if (name.length > 100) {
+            invalidate(fields.name, 'Name must not exceed 100 characters.');
         }
 
         if (email === '') {
             invalidate(fields.email, 'Please enter your email address.');
         } else if (!emailPattern.test(email)) {
             invalidate(fields.email, 'Please enter a valid email address.');
+        } else if (email.length > 255) {
+            invalidate(fields.email, 'Email must not exceed 255 characters.');
         }
 
         if (subject === '') {
             invalidate(fields.subject, 'Please enter a subject.');
+        } else if (subject.length > 150) {
+            invalidate(fields.subject, 'Subject must not exceed 150 characters.');
         }
 
         if (message === '') {
             invalidate(fields.message, 'Please enter your message.');
+        } else if (message.length > 2000) {
+            invalidate(fields.message, 'Message must not exceed 2000 characters.');
         }
 
         if (firstInvalidField) {
@@ -92,28 +102,24 @@ document.addEventListener('DOMContentLoaded', function () {
     Object.values(fields).forEach(function (field) {
         field.input.addEventListener('input', function () {
             clearError(field);
-            successMessage.hidden = true;
+
+            if (successMessage) {
+                successMessage.hidden = true;
+            }
         });
     });
 
     form.addEventListener('submit', function (event) {
-        event.preventDefault();
-        successMessage.hidden = true;
+        if (successMessage) {
+            successMessage.hidden = true;
+        }
 
         if (!validateForm()) {
+            event.preventDefault();
             return;
         }
 
-        successMessage.hidden = false;
-        form.reset();
-
-        Object.values(fields).forEach(function (field) {
-            clearError(field);
-        });
-
-        successMessage.scrollIntoView({
-            behavior: 'smooth',
-            block: 'nearest'
-        });
+        // Valid forms are submitted normally to Laravel.
+        // Laravel handles server-side validation and the response.
     });
 });
