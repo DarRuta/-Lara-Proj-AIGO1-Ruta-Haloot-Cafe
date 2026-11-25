@@ -235,7 +235,6 @@ document.addEventListener('click', function (event) {
     if (focusEl) focusEl.textContent = card.getAttribute('data-focus') || '';
 });
 </script>
-
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/about.css') }}">
 @endpush
