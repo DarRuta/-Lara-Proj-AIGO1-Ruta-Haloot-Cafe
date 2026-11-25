@@ -100,14 +100,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     Object.values(fields).forEach(function (field) {
-        field.input.addEventListener('input', function () {
+    field.input.addEventListener('input', function () {
+        if (field.input.value.trim() !== '') {
             clearError(field);
+        }
 
-            if (successMessage) {
-                successMessage.hidden = true;
-            }
-        });
+        if (successMessage) {
+            successMessage.hidden = true;
+        }
     });
+});
 
     form.addEventListener('submit', function (event) {
         if (successMessage) {
