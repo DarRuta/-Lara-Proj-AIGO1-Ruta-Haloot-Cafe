@@ -1,62 +1,172 @@
-<<<<<<< HEAD
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# MERIDIAN FITNESS
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A Laravel-based gym website developed as part of the IT 110 course.
 
-## About Laravel
+## 1. Group Information
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Group Name:** 3 Little Monkeys
+- **Section:** IT 110-AIGO1
+- **Project Name:** MERIDIAN FITNESS
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Group Members
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+| Member | Name | Assigned Module | Git Branch |
+|---|---|---|---|
+| Member 1 | Daryl Ruta | Homepage | `dev-member1-Ruta` |
+| Member 2 | Bienly Andre HALOOT | About Page | `dev-member2-Haloot` |
+| Member 3 | Princess Shayna Cafe | Contact Page | `dev-member3-Cafe` |
 
-## Learning Laravel
+## 2. Application Theme and Design
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+**Theme: Modern, Welcoming, and Unisex Fitness Website**
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+MERIDIAN is designed as a modern and welcoming fitness website intended for all gym members. Its visual style combines clean layouts, balanced colors, and page-specific designs to give each section its own identity while maintaining a consistent overall appearance.
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+### Design Features
 
-## Agentic Development
+- **Homepage:** Uses a light-colored design to create a fresh, welcoming, and energetic first impression for visitors.
+- **About Page:** Also uses a light-colored theme to maintain a clean and readable presentation of the gym's background and information.
+- **Contact Page:** Uses a darker color scheme with teal, copper, and dark wood-inspired elements to create a more focused and professional atmosphere while making the contact information and form stand out.
+- **Color Palette:** Combines light backgrounds, dark tones, teal accents, and warm copper details.
+- **Responsive Layout:** Designed to adapt to different screen sizes.
+- **Shared Dark Mode:** Includes dark mode functionality across the website.
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+**Gym Location:** Butuan City, Agusan del Norte, Philippines 8600
+
+**Operating Hours:** Open 24/7
+
+## 3. Members' Assigned Modules
+
+### Member 1 – Daryl Ruta
+- Develops the Homepage.
+- Presents the gym's main content and information.
+- Implements the homepage layout and styling.
+
+**Branch:** `dev-member1-Ruta`
+
+### Member 2 – Bienly Andre HALOOT
+- Develops the About Page.
+- Presents information about MERIDIAN and the gym.
+- Implements the page layout and styling.
+
+**Branch:** `dev-member2-Haloot`
+
+### Member 3 – Princess Shayna Cafe
+- Develops the Contact Page.
+- Displays the gym's contact information.
+- Creates a contact form with full name, email address, subject, and message fields.
+- Implements client-side form validation and error messages.
+- Implements Laravel server-side validation and a success message after submission.
+
+**Branch:** `dev-member3-Cafe`
+
+## 4. Technologies Used
+
+- **Laravel / PHP** – Backend framework and application logic.
+- **Blade** – Laravel templating engine.
+- **HTML** – Page structure.
+- **CSS** – Website styling and responsive design.
+- **JavaScript** – Client-side interactions and form validation.
+- **Node.js and NPM** – Frontend dependencies and asset building.
+- **Composer** – PHP dependency management.
+- **Git and GitHub** – Version control and collaboration.
+
+## 5. Steps to Run the Project
+
+### Prerequisites
+
+Make sure the following are installed:
+- PHP
+- Composer
+- Node.js and NPM
+- Git
+- Visual Studio Code (recommended)
+
+### Step 1: Clone the Repository
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone https://github.com/DarRuta/-Lara-Proj-AIGO1-Ruta-Haloot-Cafe.git
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+### Step 2: Open the Project Folder
 
-## Contributing
+```bash
+cd -Lara-Proj-AIGO1-Ruta-Haloot-Cafe
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Step 3: Install PHP Dependencies
 
-## Code of Conduct
+```bash
+composer install
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Step 4: Set Up the Environment File
 
-## Security Vulnerabilities
+For Windows PowerShell:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```powershell
+Copy-Item .env.example .env
+```
 
-## License
+### Step 5: Generate the Application Key
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
--Lara-Proj-AIGO1-Ruta-Haloot-Cafe
->>>>>>> 3e55b4c51a2739a8d58bb7e8587d9246df663cba
+```bash
+php artisan key:generate
+```
+
+### Step 6: Set Up the SQLite Database
+
+Create the SQLite database file if it does not already exist:
+
+```powershell
+New-Item database/database.sqlite -ItemType File -Force
+```
+
+Make sure the `.env` file uses SQLite:
+
+```env
+DB_CONNECTION=sqlite
+```
+
+Run the database migrations:
+
+```bash
+php artisan migrate
+```
+
+### Step 7: Install Frontend Dependencies
+
+```bash
+npm install
+```
+
+### Step 8: Build Frontend Assets
+
+```bash
+npm run build
+```
+
+### Step 9: Start the Laravel Development Server
+
+```bash
+php artisan serve
+```
+
+### Step 10: Open the Website
+
+Open your browser and visit:
+
+**http://127.0.0.1:8000**
+
+Available pages:
+
+- Homepage: `http://127.0.0.1:8000/`
+- About Page: `http://127.0.0.1:8000/about`
+- Contact Page: `http://127.0.0.1:8000/contact`
+
+## 6. Project Notes
+
+- Keep the Laravel development server running while accessing the website.
+- Run `npm run build` again after making frontend asset changes.
+- The Contact form uses client-side and server-side validation.
+- The Contact form displays a success message after valid submission. It does not currently send emails or permanently store submitted messages.
