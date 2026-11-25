@@ -110,15 +110,45 @@
 
 
     <!-- Apply the saved theme when the page loads -->
-    <script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const themeToggle = document.getElementById('themeToggle');
 
-        const savedTheme = localStorage.getItem('meridianTheme');
+        function updateButtonLabel() {
+            if (!themeToggle) return;
 
-        if (savedTheme === 'dark') {
-            document.body.classList.add('dark-mode');
+            themeToggle.textContent =
+                document.body.classList.contains('dark-mode')
+                    ? 'Light Mode'
+                    : 'Dark Mode';
         }
 
-    </script>
+        // Restore the saved theme
+        const savedTheme = localStorage.getItem('meridianTheme');
+
+        document.body.classList.toggle('dark-mode', savedTheme === 'dark');
+
+        updateButtonLabel();
+
+        // Handle theme changes
+        if (themeToggle) {
+            themeToggle.addEventListener('click', function () {
+                document.body.classList.toggle('dark-mode');
+
+                const isDarkMode =
+                    document.body.classList.contains('dark-mode');
+
+                localStorage.setItem(
+                    'meridianTheme',
+                    isDarkMode ? 'dark' : 'light'
+                );
+
+                updateButtonLabel();
+            });
+        }
+    });
+</script>
 
     <!-- Page-specific JavaScript -->
     @stack('scripts')
