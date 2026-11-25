@@ -210,7 +210,45 @@
             </div>
         </div>
     </section>
+<!-- FREQUENTLY ASKED QUESTIONS SECTION -->
+    <section class="about-section container faq-section" id="faq" aria-labelledby="faq-heading">
+        <div class="about-heading">
+            <h2 id="faq-heading">Frequently Asked Questions</h2>
+            <p>Quick answers before your first training session at Meridian.</p>
+        </div>
 
+        <div class="faq-list">
+            <div class="card faq-item">
+                <button type="button" class="faq-question" aria-expanded="false">
+                    <span>Do I need prior experience to join Boxing or Muay Thai classes?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" hidden>
+                    <p>No experience is required. Our coaches scale pad work, conditioning, and technique drills for complete beginners through competitive athletes.</p>
+                </div>
+            </div>
+
+            <div class="card faq-item">
+                <button type="button" class="faq-question" aria-expanded="false">
+                    <span>Should I bring my own gloves and hand wraps?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" hidden>
+                    <p>Complimentary loaner gloves are available for your first session. For regular training, we recommend bringing your own hand wraps and gloves.</p>
+                </div>
+            </div>
+
+            <div class="card faq-item">
+                <button type="button" class="faq-question" aria-expanded="false">
+                    <span>Can I combine lifting, cardio, and yoga under one membership?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" hidden>
+                    <p>Yes. All-access memberships include open gym floor access alongside scheduled combat, conditioning, and yoga sessions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 @endsection
 <script>
 document.addEventListener('click', function (event) {

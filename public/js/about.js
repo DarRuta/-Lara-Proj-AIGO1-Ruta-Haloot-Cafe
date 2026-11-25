@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initAboutThemeToggle();
     initStaffFilters();
     initStaffSpotlight();
+    initFaqAccordion();
 });
 
 function initAboutThemeToggle() {
@@ -92,6 +93,23 @@ function initStaffSpotlight() {
                 e.preventDefault();
                 selectCard(card);
             }
+        });
+    });
+}
+
+function initFaqAccordion() {
+    const questions = document.querySelectorAll('.faq-question');
+    if (!questions.length) return;
+
+    questions.forEach(function (button) {
+        button.addEventListener('click', function () {
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+
+            button.setAttribute('aria-expanded', String(!isExpanded));
+            if (answer) answer.hidden = isExpanded;
+            if (icon) icon.textContent = isExpanded ? '+' : '−';
         });
     });
 }
