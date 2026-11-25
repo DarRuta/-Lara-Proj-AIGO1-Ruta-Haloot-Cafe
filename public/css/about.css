@@ -1,0 +1,373 @@
+/* =====================================
+   MERIDIAN ABOUT PAGE STYLES
+   Palette: #0D9488 | #134E4A | #F0FDFA
+===================================== */
+
+.about-hero {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+    color: var(--white);
+    padding: 72px 0;
+}
+
+.about-hero-content {
+    max-width: 760px;
+}
+
+.about-badge {
+    display: inline-block;
+    background-color: rgba(240, 253, 250, 0.16);
+    color: var(--light);
+    border: 1px solid rgba(240, 253, 250, 0.35);
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    margin-bottom: 16px;
+}
+
+.about-hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.about-hero p {
+    font-size: 1.05rem;
+    color: var(--light);
+    opacity: 0.95;
+    margin-bottom: 28px;
+}
+
+.about-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.about-btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+.about-btn-outline:hover {
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+/* SECTION HEADINGS */
+.about-section {
+    padding: 64px 0 16px;
+}
+
+.about-heading {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 36px;
+}
+
+.about-heading h2 {
+    font-size: 2rem;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.about-heading p {
+    color: var(--gray);
+}
+
+/* MISSION & VISION */
+.mv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.mv-card {
+    padding: 28px;
+    border-top: 4px solid var(--primary);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.mv-card-accent {
+    border-top-color: var(--dark);
+}
+
+.mv-tag {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--primary);
+}
+
+.mv-card h3 {
+    font-size: 1.4rem;
+    color: var(--dark);
+}
+
+.mv-card p {
+    color: var(--text);
+}
+
+.mv-points {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 4px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(13, 148, 136, 0.18);
+}
+
+.mv-points li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+.mv-points li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* STAFF FILTERS & CARDS */
+.staff-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.filter-btn {
+    padding: 9px 18px;
+    border-radius: 999px;
+    border: 1.5px solid var(--primary);
+    background-color: var(--white);
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--light);
+}
+
+.filter-btn.active {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 24px;
+}
+
+.staff-card {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+.staff-card:hover {
+    transform: translateY(-4px);
+}
+
+.staff-card.selected {
+    border-color: var(--primary);
+    box-shadow: 0 8px 20px rgba(13, 148, 136, 0.18);
+}
+
+.staff-card.is-hidden {
+    display: none;
+}
+
+.staff-photo {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: var(--light);
+}
+
+.staff-body {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.staff-pill {
+    align-self: flex-start;
+    background-color: var(--light);
+    color: var(--dark);
+    border: 1px solid rgba(13, 148, 136, 0.3);
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.staff-body h3 {
+    font-size: 1.3rem;
+    color: var(--dark);
+}
+
+.staff-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.staff-summary {
+    font-size: 0.95rem;
+    color: var(--gray);
+    flex: 1;
+}
+
+.staff-inspect-btn {
+    align-self: flex-start;
+    margin-top: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+/* STAFF SPOTLIGHT PANEL */
+.staff-spotlight {
+    margin-top: 28px;
+    padding: 24px 28px;
+    border-left: 5px solid var(--primary);
+    background-color: var(--card-bg);
+}
+
+.spotlight-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.spotlight-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    color: var(--primary);
+}
+
+.spotlight-header h3 {
+    font-size: 1.45rem;
+    color: var(--dark);
+    margin-top: 2px;
+}
+
+.spotlight-role {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--gray);
+}
+
+.spotlight-schedule {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 6px 12px;
+    border-radius: var(--radius);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.spotlight-bio {
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.spotlight-focus {
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+/* VALUES GRID */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.value-card {
+    padding: 24px;
+}
+
+.value-card h3 {
+    color: var(--primary);
+    margin-bottom: 8px;
+    font-size: 1.15rem;
+}
+
+.value-card p {
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+/* DARK MODE SUPPORT */
+body.dark-mode .about-hero {
+    background: linear-gradient(135deg, #0b1912 0%, #16211b 100%);
+    border-bottom: 1px solid #24352b;
+}
+
+body.dark-mode .about-heading h2,
+body.dark-mode .mv-card h3,
+body.dark-mode .staff-body h3,
+body.dark-mode .spotlight-header h3 {
+    color: #e8f3ec;
+}
+
+body.dark-mode .about-heading p,
+body.dark-mode .staff-summary,
+body.dark-mode .spotlight-role {
+    color: #9fb5a8;
+}
+
+body.dark-mode .filter-btn {
+    background-color: #16211b;
+    color: #e8f3ec;
+    border-color: #22c55e;
+}
+
+body.dark-mode .filter-btn:hover {
+    background-color: #1e2d24;
+}
+
+body.dark-mode .filter-btn.active {
+    background-color: #22c55e;
+    color: #0e1411;
+}
+
+body.dark-mode .staff-pill,
+body.dark-mode .spotlight-schedule {
+    background-color: #1e2d24;
+    color: #a7f3d0;
+    border-color: rgba(34, 197, 94, 0.35);
+}
+
+body.dark-mode .staff-card.selected {
+    border-color: #22c55e;
+}
+
+body.dark-mode .staff-spotlight {
+    border-left-color: #22c55e;
+}
