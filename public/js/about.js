@@ -21,6 +21,10 @@ function initAboutThemeToggle() {
             : 'Dark Mode';
     }
 
+    if (localStorage.getItem('meridianTheme') === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+
     syncLabel();
 
     themeToggle.addEventListener('click', function () {
