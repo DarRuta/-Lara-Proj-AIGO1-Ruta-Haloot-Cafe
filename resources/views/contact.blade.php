@@ -13,6 +13,7 @@
     <section class="contact-hero">
         <div class="contact-container contact-hero__inner">
             <p class="contact-eyebrow">MERIDIAN FITNESS · BUTUAN CITY</p>
+
             <h1>LET'S GET <span>STRONGER.</span></h1>
 
             <p class="contact-hero__lead">
@@ -20,50 +21,24 @@
                 We're ready to help you take the next step.
             </p>
 
-            <a class="contact-button contact-button--outline"
+            <a class="contact-button contact-button--outline contact-button--hero"
                href="#contact-form">
                 Talk to our team
             </a>
         </div>
-
-        <div class="contact-hero__orb contact-hero__orb--one"
-             aria-hidden="true"></div>
-
-        <div class="contact-hero__orb contact-hero__orb--two"
-             aria-hidden="true"></div>
     </section>
 
     <section class="contact-main" aria-labelledby="contact-heading">
         <div class="contact-container">
-
-            <div class="contact-section-heading">
-                <p class="contact-eyebrow">WE'RE HERE FOR YOU</p>
-                <h2 id="contact-heading">Make your next move.</h2>
-
-                <p>
-                    Reach out to MERIDIAN. Whether you're new to fitness
-                    or ready for a new routine, let's talk.
-                </p>
-            </div>
 
             <div class="contact-grid">
 
                 <aside class="contact-info"
                        aria-label="MERIDIAN contact information">
 
-                    <div class="contact-info__intro">
-                        <span class="contact-info__mark"
-                              aria-hidden="true">M</span>
-
-                        <div>
-                            <h3>Contact details</h3>
-                            <p>Connect with the MERIDIAN team.</p>
-                        </div>
-                    </div>
-
                     <div class="contact-detail">
                         <span class="contact-detail__icon"
-                              aria-hidden="true">⌖</span>
+                              aria-hidden="true">⚲</span>
 
                         <div>
                             <h4>Visit us</h4>
@@ -80,13 +55,11 @@
 
                         <div>
                             <h4>Email</h4>
-
                             <p>
-                                <a href="mailto:contact@meridianfitness.example">
-                                    contact@meridianfitness.example
+                                <a href="mailto:info@meridian.gmail">
+                                    info@meridian.gmail
                                 </a>
                             </p>
-
                             <small>
                                 Sample address for project demonstration
                             </small>
@@ -99,26 +72,14 @@
 
                         <div>
                             <h4>Phone</h4>
-
                             <p>
-                                <a href="tel:+630000000000">
-                                    +63 000 000 0000
+                                <a href="tel:+63112233455">
+                                    +63 11 223 3455
                                 </a>
                             </p>
-
                             <small>
                                 Sample number for project demonstration
                             </small>
-                        </div>
-                    </div>
-
-                    <div class="contact-hours">
-                        <span class="contact-hours__status"
-                              aria-hidden="true"></span>
-
-                        <div>
-                            <h4>Open 24 hours</h4>
-                            <p>7 days a week · Every day, all day</p>
                         </div>
                     </div>
 
@@ -128,6 +89,7 @@
 
                     <div class="contact-form-card__heading">
                         <p class="contact-eyebrow">SEND AN INQUIRY</p>
+
                         <h3>Send us a message.</h3>
 
                         <p>
